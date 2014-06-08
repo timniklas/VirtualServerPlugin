@@ -1,0 +1,10 @@
+name: ServerManager
+main: com.cyberdos.bukkit.servermanager.main.ServerManager
+version: 0.2.1.2
+commands:
+   vhost:
+      usage: /<command> help
+   lobby:
+      usage: /<command>
+   server:
+      usage: /<command>
