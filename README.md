@@ -1,2 +1,2 @@
 See it on BukkitDev
-https://github.com/timniklas/VirtualServerPlugin
+http://dev.bukkit.org/bukkit-plugins/virtualservermanager/
