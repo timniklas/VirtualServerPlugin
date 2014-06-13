@@ -6,6 +6,8 @@ import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.cyberdos.bukkit.servermanager.main.ServerManager;
+
 public class Cmd_lobby {
 
 	public static boolean run(CommandSender sender, String label, String[] args) {
@@ -15,9 +17,9 @@ public class Cmd_lobby {
 		
 		if(p.getWorld().getSpawnLocation() != loc) {
 			p.teleport(loc);
-			p.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.GRAY + "Teleported to lobby...");
+			p.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.GRAY + "Teleported to lobby...");
 		} else {
-			p.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.RED + "You are already on the lobby server!");
+			p.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.RED + "You are already on the lobby server!");
 		}
 		
 		return true;

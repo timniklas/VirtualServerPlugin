@@ -1,4 +1,4 @@
-package com.cyberdos.bukkit.servermanager.commands;
+package com.cyberdos.bukkit.servermanager.commands.server;
 
 import java.io.File;
 
@@ -9,6 +9,9 @@ import org.bukkit.World;
 import org.bukkit.WorldCreator;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import com.cyberdos.bukkit.servermanager.commands.Cmd_server;
+import com.cyberdos.bukkit.servermanager.main.ServerManager;
 
 public class Cmd_server_start {
 
@@ -22,7 +25,7 @@ public class Cmd_server_start {
 		                World w = c.createWorld();
 		                Bukkit.getWorlds().add(w);
 		                
-						sender.sendMessage(ChatColor.GRAY + "======= Server Manager =======");
+						sender.sendMessage(ChatColor.GRAY + "======= " + ServerManager.name + " =======");
 						sender.sendMessage(ChatColor.GREEN + "Server " + args[1] + " created!");
 						sender.sendMessage(ChatColor.GRAY + "=============================");
 						
@@ -31,14 +34,14 @@ public class Cmd_server_start {
 						p.teleport(loc);
 		                
 					} else {
-						sender.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.RED + "World does not exist!");
+						sender.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.RED + "World does not exist!");
 					}
 				} else {
-					sender.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
+					sender.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
 				}
 			} else {
-				sender.sendMessage(ChatColor.GRAY + "======= Server Manager =======");
-				sender.sendMessage(ChatColor.GOLD + " / start " + ChatColor.BOLD + "NAME");
+				sender.sendMessage(ChatColor.GRAY + "======= " + ServerManager.name + " =======");
+				sender.sendMessage(ChatColor.GOLD + " /" + Cmd_server.cmd + " start " + ChatColor.BOLD + "NAME");
 				sender.sendMessage(ChatColor.GRAY + "=============================");
 			}
 }

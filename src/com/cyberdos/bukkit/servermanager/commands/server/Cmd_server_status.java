@@ -1,9 +1,12 @@
-package com.cyberdos.bukkit.servermanager.commands;
+package com.cyberdos.bukkit.servermanager.commands.server;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
+
+import com.cyberdos.bukkit.servermanager.commands.Cmd_server;
+import com.cyberdos.bukkit.servermanager.main.ServerManager;
 
 public class Cmd_server_status {
 	
@@ -18,7 +21,7 @@ public class Cmd_server_status {
 						}
 						
 					}
-					sender.sendMessage(ChatColor.GRAY + "======= Server Manager =======");
+					sender.sendMessage(ChatColor.GRAY + "======= " + ServerManager.name + " =======");
 					if(str1 != "") {
 						sender.sendMessage(ChatColor.GRAY + str1.substring(0, str1.length() -2));
 					} else {
@@ -27,11 +30,11 @@ public class Cmd_server_status {
 					sender.sendMessage(ChatColor.GRAY + "=============================");
 					
 				} else {
-					sender.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
+					sender.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
 				}
 			} else {
-				sender.sendMessage(ChatColor.GRAY + "======= Server Manager =======");
-				sender.sendMessage(ChatColor.GOLD + " / status ");
+				sender.sendMessage(ChatColor.GRAY + "======= " + ServerManager.name + " =======");
+				sender.sendMessage(ChatColor.GOLD + " /" + Cmd_server.cmd + " status ");
 				sender.sendMessage(ChatColor.GRAY + "=============================");
 			}
 	}

@@ -1,6 +1,6 @@
-name: ServerManager
+name: BukkitVZ
 main: com.cyberdos.bukkit.servermanager.main.ServerManager
-version: 0.2.1.2
+version: 0.2.2
 commands:
    vhost:
       usage: /<command> help

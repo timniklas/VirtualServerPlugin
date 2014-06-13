@@ -1,7 +1,10 @@
-package com.cyberdos.bukkit.servermanager.commands;
+package com.cyberdos.bukkit.servermanager.commands.server;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+
+import com.cyberdos.bukkit.servermanager.commands.Cmd_server;
+import com.cyberdos.bukkit.servermanager.main.ServerManager;
 
 public class Cmd_server_delete {
 	
@@ -33,11 +36,11 @@ public class Cmd_server_delete {
 						sender.sendMessage(ChatColor.GRAY + "=============================");*/
 						
 				} else {
-					sender.sendMessage(ChatColor.BLUE + "[ServerManager]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
+					sender.sendMessage(ChatColor.BLUE + "[" + ServerManager.name + "]" + ChatColor.RED + "Sorry but you don't have permissions for this!");
 				}
 			} else {
 				sender.sendMessage(ChatColor.GRAY + "======= Server Manager =======");
-				sender.sendMessage(ChatColor.GOLD + " / delete " + ChatColor.BOLD + "NAME");
+				sender.sendMessage(ChatColor.GOLD + " /" + Cmd_server.cmd + " delete " + ChatColor.BOLD + "NAME");
 				sender.sendMessage(ChatColor.GRAY + "=============================");
 			}
 	}

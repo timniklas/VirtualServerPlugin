@@ -8,8 +8,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.cyberdos.bukkit.servermanager.commands.CommandHandler;
 import com.cyberdos.bukkit.servermanager.events.Enable;
+import com.cyberdos.bukkit.servermanager.tools.Config;
 
 public class ServerManager extends JavaPlugin {
+	
+	public static String name = "BukkitVZ";
 	
 	public void onEnable(){
 		new Enable(this);
@@ -17,6 +20,8 @@ public class ServerManager extends JavaPlugin {
 	
 	public void onDisable(){
 		//new Disable(this);
+		
+		Config.stop(this);
 		
 		for (World world : Bukkit.getWorlds()) {
 			world.save();

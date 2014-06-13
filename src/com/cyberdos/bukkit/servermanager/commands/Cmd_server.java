@@ -3,8 +3,12 @@ package com.cyberdos.bukkit.servermanager.commands;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.cyberdos.bukkit.servermanager.commands.server.*;
+
 public class Cmd_server {
 
+	public static String cmd = "vhost";
+	
 	public static boolean run(CommandSender sender, String label, String[] args) {
 		
 		if(args.length != 0) {

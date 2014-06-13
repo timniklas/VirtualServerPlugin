@@ -4,6 +4,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.cyberdos.bukkit.servermanager.main.ServerManager;
+
 public class CommandHandler {
 
 	public static boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -20,7 +22,7 @@ public class CommandHandler {
 			return Cmd_lobby.run(sender, label, args);
 		} else {
 			if(sender instanceof Player) {} else {
-				sender.sendMessage("[ServerManager]" + "You are not a player!");
+				sender.sendMessage("[" + ServerManager.name + "]" + "You are not a player!");
 			}
 		}
 		
